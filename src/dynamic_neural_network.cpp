@@ -131,7 +131,7 @@ void DynamicNeuralNetwork::evolve()
     add_node(Node::Type::Inner, dist_real(rng_gen), dist_real(rng_gen));
   }
 
-  auto random_remove = [&](auto &container, float chance) {
+  auto random_remove = [](auto &container, float chance) {
     if (container.size() != 0) {
       std::bernoulli_distribution remove{ chance };
       if (remove(rng_gen)) {
