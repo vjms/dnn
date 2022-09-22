@@ -38,4 +38,8 @@ Accumulator &Node::get_accumulator()
 {
   return m_accumulator;
 }
+void Node::calculate_value()
+{
+  m_value = m_activation_function(m_accumulator.get_value() + m_bias);
+}
 }// namespace vjms

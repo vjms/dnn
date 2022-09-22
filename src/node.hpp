@@ -26,6 +26,7 @@ public:
   ActivationFunctionSignature get_activation_function() const;
   void set_activation_function(ActivationFunctionSignature function);
 
+  void calculate_value();
 
   Accumulator &get_accumulator();
 
